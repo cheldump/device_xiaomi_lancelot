@@ -91,6 +91,13 @@ ro.crypto.volume.metadata.method=dm-default-key
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.crypto.volume.options=::v2
 
+# Dirac
+ro.audio.soundfx.dirac=true
+persist.audio.dirac.speaker=true
+persist.dirac.acs.controller=qem
+persist.dirac.acs.storeSettings=1
+persist.dirac.acs.ignore_error=1
+
 # Display
 persist.sys.mcd_config_file=/system/etc/mcd_default.conf
 ro.opengles.version=196610

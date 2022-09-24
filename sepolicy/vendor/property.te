@@ -1,1 +1,5 @@
+# Dirac
+vendor_internal_prop(dirac_prop)
+
+# Fingerprint
 vendor_restricted_prop(vendor_fingerprint_prop);
