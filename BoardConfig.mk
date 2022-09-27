@@ -61,6 +61,12 @@ BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# HIDL
+ODM_MANIFEST_SKUS += \
+    galahad
+
+ODM_MANIFEST_GALAHAD_FILES := $(DEVICE_PATH)/manifest_galahad.xml
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_lancelot
 TARGET_RECOVERY_DEVICE_MODULES := libinit_lancelot
