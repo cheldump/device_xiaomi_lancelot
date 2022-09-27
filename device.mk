@@ -253,7 +253,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_galahad/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_galahad/com.android.nfc_extras.xml
 
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service.lancelot
@@ -390,6 +389,12 @@ PRODUCT_PACKAGES += \
     libshim_showlogo \
     libshim_vtservice \
     libpiex_shim
+
+
+# SKU-specific properties
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sku_props/build_ss_vendor.prop:$(TARGET_COPY_OUT_VENDOR)/build_ss_vendor.prop \
+    $(LOCAL_PATH)/configs/sku_props/build_dsds_vendor.prop:$(TARGET_COPY_OUT_VENDOR)/build_dsds_vendor.prop
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
