@@ -132,6 +132,9 @@ on fs
     write /sys/kernel/mm/swap/vma_ra_enabled false
     swapon_all /vendor/etc/fstab.mt6768
 
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
+
 on post-fs
     write /proc/bootprof "INIT:post-fs"
 
