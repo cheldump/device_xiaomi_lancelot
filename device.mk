@@ -434,12 +434,10 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service-lazy \
     hostapd \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi@1.3.vendor
-
-PRODUCT_PACKAGES += \
-    android.hardware.wifi-service-lazy.lancelot
+    libwifi-hal-mt66xx \
+    wpa_supplicant
 
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0
