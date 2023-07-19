@@ -424,16 +424,14 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service-lazy \
+
+PRODUCT_PACKAGES += \
+    libwifi-hal-mt66xx
+
+PRODUCT_PACKAGES += \
     hostapd \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi@1.3.vendor
-
-PRODUCT_PACKAGES += \
-    android.hardware.wifi-service-lazy.lancelot
-
-PRODUCT_PACKAGES += \
-    libkeystore-wifi-hidl \
-    libkeystore-engine-wifi-hidl
+    wpa_supplicant
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
