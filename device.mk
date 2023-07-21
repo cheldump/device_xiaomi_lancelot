@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Speed profile services and wifi-service to reduce RAM and storage
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := everything
 
 # Always preopt extracted APKs to prevent extracting out of the APK for gms
 # modules.
