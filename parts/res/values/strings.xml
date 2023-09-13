@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-
+    <!-- Xiaomi Parts -->
+    <string name="app_name">Xiaomi Parts</string>
+    
     <!-- Dirac settings: Equalizer presets -->
     <string name="dirac_preset_live">Live</string>
     <string name="dirac_preset_balanced">Balanced</string>
