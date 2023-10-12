@@ -47,6 +47,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         ThermalUtils.initialize(context);
 
         // Dolby Atmos
-        DolbyUtils.getInstance(context).onBootCompleted();
+        DolbyUtils.getInstance(context);
+
     }
 }
