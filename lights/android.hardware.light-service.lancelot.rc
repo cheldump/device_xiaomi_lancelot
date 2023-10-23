@@ -1,4 +1,4 @@
-service vendor.light-default /vendor/bin/hw/android.hardware.light-service.mt6768
+service vendor.light-default /vendor/bin/hw/android.hardware.light-service.lancelot
     class hal
     user system
     group system
