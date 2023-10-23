@@ -5,7 +5,7 @@
 //
 
 cc_library_static {
-    name: "libinit_xiaomi_mt6768",
+    name: "libinit_lancelot",
     recovery_available: true,
     srcs: [
         "init.cpp"

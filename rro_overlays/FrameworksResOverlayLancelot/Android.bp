@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "FrameworksResOverlayMT6768",
+    name: "FrameworksResOverlayLancelot",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true,

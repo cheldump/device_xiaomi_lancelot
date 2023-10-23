@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "CarrierConfigOverlayMT6768",
+    name: "CarrierConfigOverlayLancelot",
     theme: "CarrierConfigOverlay",
     certificate: "platform",
     sdk_version: "current",
