@@ -7,8 +7,19 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
+# Shipping API Level
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
@@ -55,7 +66,7 @@ PRODUCT_COPY_FILES += \
 
 # Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.mt6768
+    android.hardware.biometrics.fingerprint@2.1-service.lancelot
 
 PRODUCT_PACKAGES += \
     libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
@@ -134,12 +145,12 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 # Firmware
-COMMON_RECOVERY_TS_FW_PATH := vendor/xiaomi/mt6768-common/proprietary/vendor/firmware
+RECOVERY_TS_FW_PATH := vendor/xiaomi/lancelot/proprietary/vendor/firmware
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_RECOVERY_TS_FW_PATH)/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin \
-    $(COMMON_RECOVERY_TS_FW_PATH)/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin \
-    $(COMMON_RECOVERY_TS_FW_PATH)/focaltech_ts_fw_xinli.bin:recovery/root/vendor/firmware/focaltech_ts_fw_xinli.bin
+    $(RECOVERY_TS_FW_PATH)/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin \
+    $(RECOVERY_TS_FW_PATH)/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin \
+    $(RECOVERY_TS_FW_PATH)/focaltech_ts_fw_xinli.bin:recovery/root/vendor/firmware/focaltech_ts_fw_xinli.bin
 
 # FM Radio
 PRODUCT_PACKAGES += \
@@ -211,7 +222,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.mt6768
+    android.hardware.light-service.lancelot
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -248,12 +259,12 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayMT6768 \
-    FrameworksResOverlayMT6768 \
-    SettingsOverlayMT6768 \
-    TelephonyOverlayMT6768 \
-    TetheringConfigOverlayMT6768 \
-    WifiOverlayMT6768
+    CarrierConfigOverlayLancelot \
+    FrameworksResOverlayLancelot \
+    SettingsOverlayLancelot \
+    TelephonyOverlayLancelot \
+    TetheringConfigOverlayLancelot \
+    WifiOverlayLancelot
 
 # Power
 PRODUCT_PACKAGES += \
@@ -399,4 +410,4 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/mt6768-common/mt6768-common-vendor.mk)
+$(call inherit-product, vendor/xiaomi/lancelot/lancelot-vendor.mk)

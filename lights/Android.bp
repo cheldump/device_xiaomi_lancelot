@@ -4,9 +4,9 @@
 // SPDX-License-Identifier: Apache-2.0
 
 cc_binary {
-    name: "android.hardware.light-service.mt6768",
-    init_rc: ["android.hardware.light-service.mt6768.rc"],
-    vintf_fragments: ["android.hardware.light-service.mt6768.xml"],
+    name: "android.hardware.light-service.lancelot",
+    init_rc: ["android.hardware.light-service.lancelot.rc"],
+    vintf_fragments: ["android.hardware.light-service.lancelot.xml"],
     relative_install_path: "hw",
     srcs: [
         "main.cpp",
