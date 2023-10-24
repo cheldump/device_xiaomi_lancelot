@@ -98,12 +98,19 @@ function blob_fixup() {
         lib/libsink.so)
             "${PATCHELF}" --add-needed "libshim_vtservice.so" "${2}"
             ;;
+        vendor/lib*/libaalservice.so)
+            ;&
+        vendor/lib64/libcam.utils.sensorprovider.so)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge_mtk.so" "${2}"
+            ;;
+        vendor/bin/mnld)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge_mtk.so" "${2}"
+            ;;
     esac
 }
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
-
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
