@@ -416,7 +416,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.3.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy.lancelot
+    android.hardware.wifi-service-lazy.lancelot
 
 PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
