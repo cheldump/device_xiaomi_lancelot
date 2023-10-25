@@ -93,6 +93,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libutils-v32
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
