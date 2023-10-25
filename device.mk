@@ -93,10 +93,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libutils-v32
 
-# Charger
-PRODUCT_PACKAGES += \
-    libsuspend
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
@@ -166,9 +162,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
-
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.0
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -381,7 +374,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_audio \
     libshim_beanpod \
-    libshim_showlogo \
     libshim_vtservice \
     libpiex_shim
 
