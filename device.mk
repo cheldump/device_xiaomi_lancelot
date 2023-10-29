@@ -84,13 +84,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0.vendor \
-    android.hardware.camera.device@3.3.vendor \
-    android.hardware.camera.device@3.4.vendor \
-    android.hardware.camera.device@3.5.vendor \
     android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.4.vendor \
-    android.hardware.camera.provider@2.5.vendor \
-    android.hardware.camera.provider@2.6.vendor \
+    android.hardware.camera.provider@2.6.vendor
 
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor
@@ -110,9 +105,6 @@ PRODUCT_PACKAGES += \
     libmockdrmcryptoplugin
 
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0.vendor \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.2.vendor \
     android.hardware.drm@1.3.vendor
 
 # Disable SF configstore
@@ -141,9 +133,6 @@ PRODUCT_PACKAGES += \
 # Firmware
 RECOVERY_TS_FW_PATH := vendor/xiaomi/lancelot/proprietary/vendor/firmware
 
-# Firmware
-RECOVERY_TS_FW_PATH := vendor/xiaomi/lancelot/proprietary/vendor/firmware
-
 PRODUCT_COPY_FILES += \
     $(RECOVERY_TS_FW_PATH)/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin \
     $(RECOVERY_TS_FW_PATH)/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin \
@@ -168,11 +157,7 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
 
@@ -295,14 +280,10 @@ PRODUCT_PACKAGES += \
     libmtkperf_client
 
 PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.mtkpower@1.0.vendor \
     vendor.mediatek.hardware.mtkpower@1.1.vendor \
     vendor.mediatek.hardware.mtkpower@1.2-service.stub
 
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0.vendor \
-    android.hardware.power@1.1.vendor \
-    android.hardware.power@1.2.vendor \
     android.hardware.power@1.3.vendor
 
 PRODUCT_COPY_FILES += \
@@ -357,14 +338,7 @@ PRODUCT_COPY_FILES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.0.vendor \
-    android.hardware.radio@1.1.vendor \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.3.vendor \
-    android.hardware.radio@1.4.vendor \
     android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.0.vendor \
-    android.hardware.radio.config@1.1.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.radio-V1.4-java
@@ -388,8 +362,6 @@ PRODUCT_PACKAGES += \
 
 # Secure Element
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.0.vendor \
-    android.hardware.secure_element@1.1.vendor \
     android.hardware.secure_element@1.2.vendor
 
 # Sensors
@@ -435,12 +407,7 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2.vendor \
     android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi.hostapd@1.1.vendor \
     android.hardware.wifi.hostapd@1.2.vendor
 
 PRODUCT_PACKAGES += \
