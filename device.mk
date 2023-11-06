@@ -442,6 +442,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service-lazy.lancelot
 
 PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0
+
+PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
     libkeystore-engine-wifi-hidl
 
