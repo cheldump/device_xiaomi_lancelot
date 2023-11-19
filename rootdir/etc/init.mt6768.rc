@@ -64,6 +64,8 @@ on charger
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1 -1 -1"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp -1
 
+    exec /system/bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
+    mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
     chmod 0660 /dev/spm
     chown system system /dev/spm
     chmod 0666 /dev/kmsg
@@ -88,13 +90,12 @@ on charger
     write /sys/power/pm_async 0
     write /sys/power/pm_freeze_timeout 2000
 
-    # Turn backlight on and switch to backlight trigger
-    write /sys/class/leds/lcd-backlight/brightness "1000"
-    write /sys/class/leds/lcd-backlight/trigger "backlight"
-
     start fuelgauged
     start fuelgauged_nvram
 
+    chown system system /sys/class/leds/lcd-backlight/brightness
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/huaqin/interface/hw_info/lcm
     chmod 0660 /sys/class/huaqin/interface/hw_info/lcm
     chown system system /proc/nvt_pocket_palm_switch
@@ -104,6 +105,7 @@ on charger
     chown system system /sys/devices/platform/1100a000.spi0/spi_master/spi0/spi0.0/fts_rw_reg
     chmod 0660 /sys/devices/platform/1100a000.spi0/spi_master/spi0/spi0.0/fts_rw_reg
 
+    start vendor.light-default
     start mi_thermald
 
     # Stop bootprof
@@ -1205,13 +1207,3 @@ service mi_thermald /vendor/bin/mi_thermald
     group system
 on property:odm.audio.typec.status=*
     setprop vendor.audio.typec.status ${odm.audio.typec.status}
-
-service vendor.charger /system/bin/charger
-    class charger
-    user system
-    group system graphics wakelock input
-    capabilities SYS_BOOT
-    file /dev/kmsg w
-    file /sys/fs/pstore/console-ramoops-0 r
-    file /sys/fs/pstore/console-ramoops r
-    file /proc/last_kmsg r

@@ -18,9 +18,6 @@ ro.mtk_cam_stereo_camera_support=1
 # Cached app compaction
 persist.device_config.activity_manager.use_compaction=true
 
-# Charger
-ro.charger.enable_suspend=true
-
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
 
