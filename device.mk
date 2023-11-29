@@ -406,7 +406,6 @@ PRODUCT_PACKAGES += \
     libshim_audio \
     libshim_beanpod \
     libshim_showlogo \
-    libshim_vtservice \
     libpiex_shim
 
 
