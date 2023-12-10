@@ -27,6 +27,4 @@ $(VENDOR_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(VENDOR_SYMLINKS)
 
-include external/wpa_supplicant_8/hostapd/Android.mk
-
 endif
