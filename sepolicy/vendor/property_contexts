@@ -5,6 +5,7 @@ vendor.audio.spkcal.copy.inhal                          u:object_r:vendor_mtk_au
 
 # Camera
 vendor.camera.sensor.                                   u:object_r:vendor_mtk_camera_prop:s0
+vendor.camera.operationmode                         u:object_r:vendor_mtk_camera_prop:s0
 vendor.debug.camera.enableMetaPending			u:object_r:vendor_mtk_camera_prop:s0
 vendor.debug.camera.enableMetaMerge			u:object_r:vendor_mtk_camera_prop:s0
 vendor.debug.tpi.                     			u:object_r:vendor_mtk_camera_prop:s0
@@ -14,6 +15,13 @@ persist.camera.module.                                  u:object_r:vendor_mtk_ca
 # Fingerprint
 persist.vendor.sys.fp.                                  u:object_r:vendor_fingerprint_prop:s0
 vendor.fps_hal.                                         u:object_r:vendor_fingerprint_prop:s0
+
+# Power
+vendor.mediatek.powerhal.state                           u:object_r:vendor_power_prop:s0
+vendor.mediatek.powerhal.audio                           u:object_r:vendor_power_prop:s0
+vendor.mediatek.powerhal.lpm                             u:object_r:vendor_power_prop:s0
+vendor.mediatek.powerhal.init                            u:object_r:vendor_power_prop:s0
+vendor.mediatek.powerhal.rendering                       u:object_r:vendor_power_prop:s0
 
 # Thermal
 vendor.sys.thermal.     				u:object_r:vendor_thermal_engine_prop:s0
