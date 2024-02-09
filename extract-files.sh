@@ -88,7 +88,7 @@ function blob_fixup() {
         vendor/lib*/hw/android.hardware.thermal@2.0-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
-	vendor/lib64/libmi_watermark.so)
+	    vendor/lib64/libmi_watermark.so)
             "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
         vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
@@ -96,6 +96,9 @@ function blob_fixup() {
             ;;
         vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service)
             "${PATCHELF}" --replace-needed "android.hardware.power-V1-ndk_platform.so" "android.hardware.power-V1-ndk.so" "${2}"
+            ;;
+        vendor/bin/mnld)
+            "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
     esac
 }
