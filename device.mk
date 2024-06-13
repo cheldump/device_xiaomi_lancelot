@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinycompress \
     libtinyxml \
+    libunwindstack.vendor \
     tinymix
 
 PRODUCT_PACKAGES += \
@@ -98,6 +99,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend
 
+PRODUCT_PACKAGES += \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libpng.vendor
+
 # Cgroup
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
@@ -137,6 +143,9 @@ PRODUCT_PACKAGES += \
     libdrm \
     libdrm.vendor
 
+PRODUCT_PACKAGES += \
+    libutilscallstack.vendor
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -175,6 +184,10 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libexpat.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -406,7 +419,6 @@ PRODUCT_PACKAGES += \
     libshim_beanpod \
     libpiex_shim
 
-
 # SKU-specific properties
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sku_props/build_ss_vendor.prop:$(TARGET_COPY_OUT_VENDOR)/build_ss_vendor.prop \
@@ -439,7 +451,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service
 
 PRODUCT_PACKAGES += \
-    libwifi-hal-wrapper
+    libwifi-hal-wrapper \
+    libnetutils.vendor
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
