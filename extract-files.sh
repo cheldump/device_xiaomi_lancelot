@@ -100,6 +100,9 @@ function blob_fixup() {
         vendor/bin/mnld)
             "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
+        system_ext/lib64/libsource.so)
+            grep -q libshim_ui.so "$2" || "${PATCHELF}" --add-needed libshim_ui.so "${2}}"
+            ;;
     esac
 }
 

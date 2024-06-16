@@ -40,3 +40,15 @@ cc_library_shared {
     ],
     include_dirs: [ "system/keymaster/include" ],
 }
+
+cc_library_shared {
+    name: "libshim_ui",
+    shared_libs: [
+        "libui",
+        "libutils",
+    ],
+    srcs: [
+        "GraphicBufferMapper.cpp",
+    ],
+    system_ext_specific: true,
+}
