@@ -7,7 +7,3 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/halcyon_lancelot.mk
 
-COMMON_LUNCH_CHOICES := \
-    halcyon_lancelot-user \
-    halcyon_lancelot-userdebug \
-    halcyon_lancelot-eng
