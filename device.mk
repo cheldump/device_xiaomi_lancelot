@@ -110,6 +110,12 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor \
 
 PRODUCT_PACKAGES += \
+    libcamera_metadata.vendor \
+    libexpat.vendor \
+    libpng.vendor \
+    liblz4.vendor
+
+PRODUCT_PACKAGES += \
     libdng_sdk.vendor
 
 PRODUCT_PACKAGES += \
@@ -156,7 +162,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libdrm \
-    libdrm.vendor
+    libdrm.vendor \
+    libion.vendor \
+    libui.vendor
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -187,6 +195,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
+PRODUCT_PACKAGES += \
+    libgatekeeper.vendor
+
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0.vendor \
@@ -196,6 +207,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -215,6 +229,7 @@ PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
     libhidltransport \
     libhidltransport.vendor \
+    libhidlmemory.vendor \
     libhwbinder \
     libhwbinder.vendor
 
@@ -244,7 +259,8 @@ PRODUCT_PACKAGES += \
     libkeymaster4.vendor \
     libkeymaster4support.vendor \
     libpuresoftkeymasterdevice.vendor \
-    libsoft_attestation_cert.vendor
+    libsoft_attestation_cert.vendor \
+    libnetutils.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -424,7 +440,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libshim_sensors \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libpower.vendor
 
 # Shims
 PRODUCT_PACKAGES += \
@@ -458,6 +475,11 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libunwindstack.vendor \
+    libutilscallstack.vendor
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
