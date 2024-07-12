@@ -79,6 +79,9 @@ ro.netflix.bsp_rev=MTK6768-19055-1
 ro.vendor.mtk_widevine_drm_l1_support=1
 ro.vendor.mtk_sec_video_path_support=1
 
+# AUX Camera
+vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
+
 # Data
 ro.vendor.mtk_f2fs_enable=0
 ro.vendor.mtk_fd_support=1
