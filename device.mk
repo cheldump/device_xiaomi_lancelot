@@ -62,7 +62,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libtinycompress \
     libtinyxml \
-    tinymix
+    tinymix \
+    libldacBT_bco
 
 PRODUCT_PACKAGES += \
     MtkInCallService
