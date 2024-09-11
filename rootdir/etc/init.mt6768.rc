@@ -3,12 +3,7 @@
 import /vendor/etc/init/hw/init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6768.usb.rc
 import /vendor/etc/init/hw/init.project.rc
-import /FWUpgradeInit.rc
-import /vendor/etc/init/hw/init.volte.rc
-import /vendor/etc/init/hw/init.mal.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
-import /vendor/etc/init/hw/init.stnfc.rc
-import /system/etc/init/hw/init.stnfc.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import /vendor/etc/init/hw/init.modem.rc
@@ -928,17 +923,6 @@ on boot
     chown system system /sys/touchpanel/double_tap
     chmod 0660 /sys/touchpanel/double_tap
 
-# add charge_logger service for dump charge message
-service charge_logger /vendor/bin/charge_logger
-	class last_start
-	user system
-	group system system wakelock
-	disabled
-	oneshot
-
-on property:sys.boot_completed=1
-	start charge_logger
-
 #Power Manager
     write /sys/power/pm_freeze_timeout 2000
 
@@ -990,39 +974,9 @@ on property:sys.boot_completed=1
 on property:sys.boot_completed=1
     setprop vendor.powerhal.init 1
 
-#service dpfd /vendor/bin/dpfd
-#	user root
-#	group system media
-
 #
 #  External Modme control related services
 #
-
-#
-#  Modem related services (Begin)
-#
-##Add by T.Zh for ppp daemon
-#service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
-#    user root
-#    disabled
-#    oneshot
-#
-##
-#
-#  Modem related services (End)
-#
-
-#add for power-off alarm
-#service poad /vendor/bin/poad
-#    class main
-#    user system
-#    group system
-#    oneshot
-
-#service BGW /vendor/xbin/BGW
-#	user system
-#	group gps system radio
-#	class main
 
 # Battery info
 on property:persist.vendor.mediatek.fg.disable=1
